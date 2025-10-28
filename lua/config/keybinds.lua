@@ -3,6 +3,7 @@ local map = vim.keymap.set
 
 map("n", "<leader>w", ":w<CR>", opts)
 map("n", "<leader>q", ":wq<CR>", opts)
+map("n", "<leader>Q", ":qa!<CR>", opts)
 map("n", "<leader>lf", vim.lsp.buf.format)
 map("n", "tw", ":bd<CR>", opts)
 
