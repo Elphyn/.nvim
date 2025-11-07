@@ -4,9 +4,7 @@ return {
 	priority = 1000,
 	config = function()
 		require("vague").setup({
-			colors = {
-				bg = "#1e1e2e",
-			},
+			colors = {},
 		})
 		vim.cmd("colorscheme vague")
 	end,

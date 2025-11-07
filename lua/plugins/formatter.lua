@@ -7,10 +7,11 @@ return {
 				lua = { "stylua" },
 				python = { "isort", "black" },
 				javascript = { "prettierd", "prettier", stop_after_first = true },
+				javascriptreact = { "prettierd", "prettier", stop_after_first = true },
 			},
 		})
 		vim.api.nvim_create_autocmd("BufWritePre", {
-			pattern = "*.lua",
+			pattern = "*.*",
 			callback = function()
 				require("conform").format({ async = false })
 			end,

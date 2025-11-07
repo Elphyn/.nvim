@@ -7,6 +7,7 @@ return {
 				component_separators = { left = "", right = "" },
 				section_separators = { left = "", right = "" },
 				theme = "iceberg_dark",
+				globalstatus = true,
 			},
 			sections = {
 				lualine_a = { "mode" },
