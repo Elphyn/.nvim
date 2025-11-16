@@ -23,6 +23,12 @@ map("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
 map("n", "<C-l>", "<C-w>l", { desc = "Move focus to the right window" })
 map("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 map("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
+-- tabs resize
+map("n", "<A-l>", ":vertical resize -2<CR>")
+map("n", "<A-h>", ":vertical resize +2<CR>")
+
+-- map("n", "<A-j>", ":resize -2<CR>")
+-- map("n", "<A-k>", ":resize +2<CR>")
 
 -- oil keymaps
 
@@ -35,6 +41,7 @@ map("n", "<leader>e", function()
 	vim.cmd("Oil")
 end)
 
+-- TODO: There's some kind of annoying delay here, need to debug
 map("n", "<leader>c", function()
 	local b_type = vim.bo.filetype
 	if b_type == "oil" then
