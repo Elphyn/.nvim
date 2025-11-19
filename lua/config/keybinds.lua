@@ -13,6 +13,10 @@ map("n", "K", vim.lsp.buf.hover, opts)
 map("n", "{", "{zz")
 map("n", "}", "}zz")
 
+-- quickfix list
+map("n", "]q", "<cmd>cnext<CR>")
+map("n", "[q", "<cmd>cprev<CR>")
+
 -- snippets
 map("i", "<C-l>", "l<C-j>")
 
@@ -24,8 +28,8 @@ map("n", "<C-l>", "<C-w>l", { desc = "Move focus to the right window" })
 map("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 map("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 -- tabs resize
-map("n", "<A-l>", ":vertical resize -2<CR>")
-map("n", "<A-h>", ":vertical resize +2<CR>")
+map("n", "<A-h>", ":vertical resize -2<CR>")
+map("n", "<A-l>", ":vertical resize +2<CR>")
 
 -- map("n", "<A-j>", ":resize -2<CR>")
 -- map("n", "<A-k>", ":resize +2<CR>")

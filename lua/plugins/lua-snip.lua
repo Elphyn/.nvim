@@ -48,6 +48,11 @@ return {
 				i(0),
 				t(")"),
 			}),
+			s("ld", {
+				t('console.log("[DEBUG] '),
+				i(0),
+				t('")'),
+			}),
 			s("if", {
 				t("if("),
 				i(1, "condition"),
