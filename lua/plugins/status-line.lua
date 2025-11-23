@@ -10,9 +10,18 @@ return {
 				globalstatus = true,
 			},
 			sections = {
-				lualine_a = { "mode" },
-				lualine_b = { "branch", "diff", "diagnostics" },
-				lualine_c = { "filename" },
+				lualine_a = {
+					{
+						"mode",
+					},
+				},
+				-- lualine_b = { "branch", "diff", "diagnostics" },
+				lualine_b = {},
+				lualine_c = {
+					{
+						"filename",
+					},
+				},
 				lualine_x = { "fileformat", "filetype" },
 				lualine_y = {},
 				lualine_z = {},

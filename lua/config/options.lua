@@ -12,3 +12,5 @@ vim.o.wrap = false
 vim.o.linebreak = false
 vim.o.scrolloff = 8
 vim.o.relativenumber = true
+vim.o.laststatus = 2
+vim.o.cmdheight = 1
