@@ -14,3 +14,4 @@ vim.o.scrolloff = 8
 vim.o.relativenumber = true
 vim.o.laststatus = 2
 vim.o.cmdheight = 1
+vim.o.mouse = ""

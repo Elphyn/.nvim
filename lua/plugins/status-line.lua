@@ -16,7 +16,7 @@ return {
 					},
 				},
 				-- lualine_b = { "branch", "diff", "diagnostics" },
-				lualine_b = {},
+				lualine_b = { "diff" },
 				lualine_c = {
 					{
 						"filename",

@@ -5,9 +5,6 @@ return {
 		lazy = false,
 		---@type snacks.Config
 		opts = {
-			-- your configuration comes here
-			-- or leave it empty to use the default settings
-			-- refer to the configuration section below
 			bigfile = { enabled = false },
 			dashboard = { enabled = false },
 			explorer = { enabled = false },
@@ -163,13 +160,6 @@ return {
 			-- gh
 			{
 				"<leader>gi",
-				function()
-					Snacks.picker.gh_issue()
-				end,
-				desc = "GitHub Issues (open)",
-			},
-			{
-				"<leader>gI",
 				function()
 					Snacks.picker.gh_issue({ state = "all" })
 				end,
@@ -434,29 +424,4 @@ return {
 			},
 		},
 	},
-	-- {
-	-- 	"nvim-telescope/telescope.nvim",
-	-- 	tag = "0.1.8",
-	-- 	dependencies = { "nvim-lua/plenary.nvim" },
-	-- 	config = function()
-	-- 		local map = vim.keymap.set
-	-- 		-- telescope
-	-- 		local builtin = require("telescope.builtin")
-	-- 		map("n", "<leader><leader>", builtin.find_files)
-	-- 		map("n", "<leader>g", builtin.live_grep)
-	-- 		map("n", "<leader>fb", builtin.buffers)
-	-- 		-- map("n", "<leader>si", builtin.grep_string)
-	-- 		-- map("n", "<leader>so", builtin.oldfiles)
-	-- 		-- map("n", "<leader>sh", builtin.help_tags)
-	-- 		-- map("n", "<leader>sm", builtin.man_pages)
-	-- 		map("n", "<leader>fr", builtin.lsp_references)
-	-- 		map("n", "<leader>fd", builtin.diagnostics)
-	-- 		map("n", "<leader>fi", builtin.lsp_implementations)
-	-- 		map("n", "<leader>fT", builtin.lsp_type_definitions)
-	-- 		-- map("n", "<leader>ss", builtin.current_buffer_fuzzy_find)
-	-- 		-- map("n", "<leader>st", builtin.builtin)
-	-- 		-- map("n", "<leader>sc", builtin.git_bcommits)
-	-- 		-- map("n", "<leader>sk", builtin.keymaps)
-	-- 	end,
-	-- },
 }
