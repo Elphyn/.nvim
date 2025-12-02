@@ -14,8 +14,11 @@ map("n", "{", "{zz")
 map("n", "}", "}zz")
 
 -- quickfix list
-map("n", "]q", "<cmd>cnext<CR>")
-map("n", "[q", "<cmd>cprev<CR>")
+
+vim.keymap.set("n", "<F1>", ":cnext<CR>", { desc = "Next quickfix item", noremap = true, silent = true })
+vim.keymap.set("n", "<F2>", ":cprev<CR>", { desc = "Previous quickfix item", noremap = true, silent = true })
+vim.keymap.set("n", "<leader>co", ":copen<CR>", { desc = "Open quickfix" })
+vim.keymap.set("n", "<leader>cq", ":cclose<CR>", { desc = "Close quickfix" })
 
 -- snippets
 map("i", "<C-l>", "l<C-j>")

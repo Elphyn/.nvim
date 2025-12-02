@@ -24,7 +24,7 @@ vim.lsp.config("lua_ls", {
 				library = {
 					"${3rd}/luv/library",
 					unpack(vim.api.nvim_get_runtime_file("", true)),
-					"/home/vlad/LuaAddons/cc-tweaked-documentation/library",
+					"/home/vlad/LuaAddons/cc-tweaked-documentation/library", --  <----Replace this path to where you clone this repo
 				},
 			},
 		},
