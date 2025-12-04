@@ -15,10 +15,10 @@ map("n", "}", "}zz")
 
 -- quickfix list
 
-vim.keymap.set("n", "<F1>", ":cnext<CR>", { desc = "Next quickfix item", noremap = true, silent = true })
-vim.keymap.set("n", "<F2>", ":cprev<CR>", { desc = "Previous quickfix item", noremap = true, silent = true })
-vim.keymap.set("n", "<leader>co", ":copen<CR>", { desc = "Open quickfix" })
-vim.keymap.set("n", "<leader>cq", ":cclose<CR>", { desc = "Close quickfix" })
+map("n", "<F1>", ":cnext<CR>", opts)
+map("n", "<F2>", ":cprev<CR>", opts)
+map("n", "<leader>co", ":copen<CR>", opts)
+map("n", "<leader>cq", ":cclose<CR>", opts)
 
 -- snippets
 map("i", "<C-l>", "l<C-j>")
@@ -49,11 +49,11 @@ map("n", "<leader>e", function()
 end)
 
 -- TODO: There's some kind of annoying delay here, need to debug
-map("n", "<leader>c", function()
-	local b_type = vim.bo.filetype
-	if b_type == "oil" then
-		vim.cmd("bd")
-		return
-	end
-	vim.cmd("Oil ~/.config/nvim")
-end)
+-- map("n", "<leader>c", function()
+-- 	local b_type = vim.bo.filetype
+-- 	if b_type == "oil" then
+-- 		vim.cmd("bd")
+-- 		return
+-- 	end
+-- 	vim.cmd("Oil ~/.config/nvim")
+-- end)

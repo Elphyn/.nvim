@@ -19,8 +19,17 @@ return {
 			scroll = { enabled = false },
 			statuscolumn = { enabled = false },
 			words = { enabled = false },
+			terminal = {},
 		},
 		keys = {
+			-- Terminal
+			{
+				"<leader>t",
+				function()
+					Snacks.terminal.toggle()
+				end,
+				desc = "Toggle terminal",
+			},
 			-- Top Pickers & Explorer
 			{
 				"<leader><space>",
