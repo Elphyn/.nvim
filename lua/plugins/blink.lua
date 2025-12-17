@@ -4,13 +4,16 @@ return {
 
 	version = "1.*",
 
-	---@module 'blink.cmp'
-	---@type blink.cmp.Config
 	opts = {
 		keymap = {
 			preset = "default",
 			["<Tab>"] = { "accept", "fallback" },
 			["<S-Tab>"] = { "select_prev", "fallback" },
+			["<C-space>"] = {
+				function(cmp)
+					cmp.show({ providers = { "snippets" } })
+				end,
+			},
 		},
 
 		appearance = {

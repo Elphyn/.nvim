@@ -20,6 +20,13 @@ map("n", "<F2>", ":cprev<CR>", opts)
 map("n", "<leader>co", ":copen<CR>", opts)
 map("n", "<leader>cq", ":cclose<CR>", opts)
 
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "qf",
+	callback = function()
+		map("n", "q", ":cclose<CR>", { buffer = true, silent = true })
+	end,
+})
+
 -- snippets
 map("i", "<C-l>", "l<C-j>")
 
@@ -47,6 +54,13 @@ map("n", "<leader>e", function()
 	end
 	vim.cmd("Oil")
 end)
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "oil",
+	callback = function()
+		map("n", "q", ":q<CR>", { buffer = true, silent = true })
+	end,
+})
 
 -- TODO: There's some kind of annoying delay here, need to debug
 -- map("n", "<leader>c", function()
