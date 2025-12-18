@@ -6,7 +6,7 @@ return {
 	config = function()
 		require("oil").setup({
 			keymaps = {
-				["l"] = "actions.select",
+				["l"] = { "actions.select", mode = "n" },
 				["h"] = { "actions.parent", mode = "n" },
 			},
 			columns = {
