@@ -6,7 +6,7 @@ return {
 			options = {
 				component_separators = { left = "", right = "" },
 				section_separators = { left = "", right = "" },
-				theme = "iceberg_dark",
+				theme = "auto",
 				globalstatus = true,
 			},
 			sections = {
