@@ -71,3 +71,6 @@ vim.api.nvim_create_autocmd("FileType", {
 -- 	end
 -- 	vim.cmd("Oil ~/.config/nvim")
 -- end)
+-- Git
+map("n", "]h", ":Gitsigns next_hunk<CR>", opts)
+map("n", "[h", ":Gitsigns prev_hunk<CR>", opts)
