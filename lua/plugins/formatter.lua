@@ -8,6 +8,7 @@ return {
 				python = { "isort", "black" },
 				javascript = { "prettierd", "prettier", stop_after_first = true },
 				javascriptreact = { "prettierd", "prettier", stop_after_first = true },
+				go = { "gofmt" },
 			},
 		})
 		vim.api.nvim_create_autocmd("BufWritePre", {

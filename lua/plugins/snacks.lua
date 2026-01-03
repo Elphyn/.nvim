@@ -368,6 +368,13 @@ return {
 			},
 			-- LSP
 			{
+				"gt",
+				function()
+					Snacks.picker.lsp_type_definitions()
+				end,
+				desc = "Goto Type Definition",
+			},
+			{
 				"gd",
 				function()
 					Snacks.picker.lsp_definitions()
