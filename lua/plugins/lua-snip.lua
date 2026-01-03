@@ -24,6 +24,8 @@ return {
 		local i = ls.insert_node
 		local f = ls.function_node
 
+		-- ls.filetype_extend("js", { "jsx" })
+
 		-- snippets
 		ls.add_snippets("all", {
 			s("af", {

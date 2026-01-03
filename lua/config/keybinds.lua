@@ -30,16 +30,20 @@ vim.api.nvim_create_autocmd("FileType", {
 -- snippets
 map("i", "<C-l>", "l<C-j>")
 
--- tabs
+-- splits
 map("n", "sv", ":vsplit<CR>", opts)
 map("n", "sh", ":split<CR>", opts)
 map("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
 map("n", "<C-l>", "<C-w>l", { desc = "Move focus to the right window" })
 map("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 map("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
--- tabs resize
+
+-- splits resize
 map("n", "<A-h>", ":vertical resize -2<CR>")
 map("n", "<A-l>", ":vertical resize +2<CR>")
+
+-- tabs
+map("n", "tq", ":tabclose<CR>", opts)
 
 -- map("n", "<A-j>", ":resize -2<CR>")
 -- map("n", "<A-k>", ":resize +2<CR>")
@@ -56,21 +60,12 @@ map("n", "<leader>e", function()
 end)
 
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = "oil",
+	pattern = "oil, diffview, snacks_terminal",
 	callback = function()
 		map("n", "q", ":q<CR>", { buffer = true, silent = true })
 	end,
 })
 
--- TODO: There's some kind of annoying delay here, need to debug
--- map("n", "<leader>c", function()
--- 	local b_type = vim.bo.filetype
--- 	if b_type == "oil" then
--- 		vim.cmd("bd")
--- 		return
--- 	end
--- 	vim.cmd("Oil ~/.config/nvim")
--- end)
 -- Git
 map("n", "]h", ":Gitsigns next_hunk<CR>", opts)
 map("n", "[h", ":Gitsigns prev_hunk<CR>", opts)
