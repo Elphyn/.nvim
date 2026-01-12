@@ -6,8 +6,6 @@ map("n", "<leader>q", ":wq<CR>", opts)
 map("n", "<leader>Q", ":qa!<CR>", opts)
 map("n", "<leader>lf", vim.lsp.buf.format)
 map("n", "tw", ":bd<CR>", opts)
---  hover info
-map("n", "K", vim.lsp.buf.hover, opts)
 
 -- moving + centering
 map("n", "{", "{zz")
@@ -69,3 +67,7 @@ vim.api.nvim_create_autocmd("FileType", {
 -- Git
 map("n", "]h", ":Gitsigns next_hunk<CR>", opts)
 map("n", "[h", ":Gitsigns prev_hunk<CR>", opts)
+
+--  LSP
+map("n", "K", vim.lsp.buf.hover, opts)
+map("n", "<leader>rn", vim.lsp.buf.rename, { desc = "LSP Rename symbol" })
