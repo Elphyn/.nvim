@@ -22,8 +22,9 @@ vim.lsp.config("lua_ls", {
 				userThirdParty = true,
 				checkThirdParty = false,
 				library = {
+					-- vim.env.VIMRUNTIME,
 					"${3rd}/luv/library",
-					"/home/vlad/LuaAddons/cc-tweaked-documentation/library",
+					"/home/vlad/projects/LuaAddons/cc-tweaked-documentation/library",
 					-- unpack(vim.api.nvim_get_runtime_file("", true)),
 				},
 			},
